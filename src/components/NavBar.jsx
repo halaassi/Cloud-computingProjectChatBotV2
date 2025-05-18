@@ -17,7 +17,7 @@ const NavBar = () => {
 
   return (
     <div style={{ background: '#f2f2f2', padding: '10px' }}>
-      <span>👤 {username}</span>
+      <span>{username}</span>
       <button onClick={handleSignOut} style={{ float: 'right' }}>Logout</button>
     </div>
   );
