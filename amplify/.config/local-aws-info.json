@@ -1,0 +1,12 @@
+{
+  "dev": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/NG9S2z9fGy"
+  },
+  "devv": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/VvRDWwwPH1"
+  }
+}
