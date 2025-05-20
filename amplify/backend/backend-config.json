@@ -1,28 +1,5 @@
 {
-  "api": {
-    "AdminQueries": {
-      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "cloudassistant5f9da4ae"
-        },
-        {
-          "attributes": [
-            "Arn",
-            "Name"
-          ],
-          "category": "function",
-          "resourceName": "AdminQueriesd85216a5"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
-    }
-  },
+  "api": {},
   "auth": {
     "cloudassistant5f9da4ae": {
       "customAuth": false,
@@ -52,35 +29,26 @@
     }
   },
   "function": {
-    "AdminQueriesd85216a5": {
+    "AdminQueriesNew": {
       "build": true,
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "cloudassistant5f9da4ae"
-        }
-      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_AdminQueriesd85216a5_deploymentBucketName": {
+    "AMPLIFY_function_AdminQueriesNew_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "AdminQueriesd85216a5"
+          "resourceName": "AdminQueriesNew"
         }
       ]
     },
-    "AMPLIFY_function_AdminQueriesd85216a5_s3Key": {
+    "AMPLIFY_function_AdminQueriesNew_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "AdminQueriesd85216a5"
+          "resourceName": "AdminQueriesNew"
         }
       ]
     }

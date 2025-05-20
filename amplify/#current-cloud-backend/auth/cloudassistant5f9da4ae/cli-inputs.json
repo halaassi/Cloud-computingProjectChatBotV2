@@ -2,7 +2,11 @@
   "version": "1",
   "cognitoConfig": {
     "identityPoolName": "cloudassistant5f9da4ae_identitypool_5f9da4ae",
+<<<<<<< HEAD
+    "allowUnauthenticatedIdentities": true,
+=======
     "allowUnauthenticatedIdentities": false,
+>>>>>>> temp-branch
     "resourceNameTruncated": "clouda5f9da4ae",
     "userPoolName": "cloudassistant5f9da4ae_userpool_5f9da4ae",
     "autoVerifiedAttributes": [
@@ -14,10 +18,17 @@
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
+<<<<<<< HEAD
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+=======
     "emailVerificationSubject": "Verify your email for Cloud Assistant",
     "emailVerificationMessage": "Your verification code is {####}",
     "defaultPasswordPolicy": true,
     "passwordPolicyMinLength": "8",
+>>>>>>> temp-branch
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
       "email"
@@ -26,18 +37,29 @@
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
+<<<<<<< HEAD
+=======
       "family_name",
+>>>>>>> temp-branch
       "email"
     ],
     "userpoolClientReadAttributes": [
       "email"
     ],
     "userpoolClientLambdaRole": "clouda5f9da4ae_userpoolclient_lambda_role",
+<<<<<<< HEAD
+    "userpoolClientSetAttributes": false,
+    "sharedId": "5f9da4ae",
+    "resourceName": "cloudassistant5f9da4ae",
+    "authSelections": "identityPoolAndUserPool",
+    "useDefault": "default",
+=======
     "userpoolClientSetAttributes": true,
     "sharedId": "5f9da4ae",
     "resourceName": "cloudassistant5f9da4ae",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "manual",
+>>>>>>> temp-branch
     "usernameAttributes": [
       "email"
     ],
@@ -58,6 +80,9 @@
       ]
     },
     "breakCircularDependency": true,
+<<<<<<< HEAD
+    "dependsOn": []
+=======
     "dependsOn": [],
     "thirdPartyAuth": false,
     "userPoolGroups": false,
@@ -70,5 +95,6 @@
       "Ref": "AWS::StackId"
     },
     "permissions": []
+>>>>>>> temp-branch
   }
 }

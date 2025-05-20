@@ -205,7 +205,7 @@
         "TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/auth/cloudassistant5f9da4ae-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "cloudassistant5f9da4ae_identitypool_5f9da4ae",
-          "allowUnauthenticatedIdentities": false,
+          "allowUnauthenticatedIdentities": true,
           "resourceNameTruncated": "clouda5f9da4ae",
           "userPoolName": "cloudassistant5f9da4ae_userpool_5f9da4ae",
           "autoVerifiedAttributes": "email",
@@ -215,7 +215,7 @@
           "smsVerificationMessage": "Your verification code is {####}",
           "emailVerificationSubject": "Verify your email for Cloud Assistant",
           "emailVerificationMessage": "Your verification code is {####}",
-          "defaultPasswordPolicy": true,
+          "defaultPasswordPolicy": false,
           "passwordPolicyMinLength": "8",
           "passwordPolicyCharacters": "",
           "requiredAttributes": "email",
@@ -225,7 +225,7 @@
           "userpoolClientWriteAttributes": "family_name,email",
           "userpoolClientReadAttributes": "email",
           "userpoolClientLambdaRole": "clouda5f9da4ae_userpoolclient_lambda_role",
-          "userpoolClientSetAttributes": true,
+          "userpoolClientSetAttributes": false,
           "sharedId": "5f9da4ae",
           "resourceName": "cloudassistant5f9da4ae",
           "authSelections": "identityPoolAndUserPool",
@@ -251,7 +251,7 @@
           "dependsOn": "",
           "thirdPartyAuth": false,
           "userPoolGroups": false,
-          "adminQueries": true,
+          "adminQueries": false,
           "triggers": "{}",
           "hostedUI": false,
           "adminQueryGroup": "Admin",
@@ -264,46 +264,13 @@
         }
       }
     },
-    "apiAdminQueries": {
+    "functionAdminQueriesNew": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/api/AdminQueries-cloudformation-template.json",
-        "Parameters": {
-          "authcloudassistant5f9da4aeUserPoolId": {
-            "Fn::GetAtt": [
-              "authcloudassistant5f9da4ae",
-              "Outputs.UserPoolId"
-            ]
-          },
-          "functionAdminQueriesd85216a5Arn": {
-            "Fn::GetAtt": [
-              "functionAdminQueriesd85216a5",
-              "Outputs.Arn"
-            ]
-          },
-          "functionAdminQueriesd85216a5Name": {
-            "Fn::GetAtt": [
-              "functionAdminQueriesd85216a5",
-              "Outputs.Name"
-            ]
-          },
-          "env": "devv"
-        }
-      }
-    },
-    "functionAdminQueriesd85216a5": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/function/AdminQueriesd85216a5-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/function/AdminQueriesNew-cloudformation-template.json",
         "Parameters": {
           "deploymentBucketName": "amplify-cloudassistant-devv-ea735-deployment",
-          "s3Key": "amplify-builds/AdminQueriesd85216a5-56574350447836772b4e-build.zip",
-          "authcloudassistant5f9da4aeUserPoolId": {
-            "Fn::GetAtt": [
-              "authcloudassistant5f9da4ae",
-              "Outputs.UserPoolId"
-            ]
-          },
+          "s3Key": "amplify-builds/AdminQueriesNew-4c686f2f6d306c413631-build.zip",
           "env": "devv"
         }
       }
