@@ -1,0 +1,130 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cloudassistant-devv-ea735-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-devv-ea735-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-devv-ea735-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cloudassistant-devv-ea735-deployment",
+      "UnauthRoleName": "amplify-cloudassistant-devv-ea735-unauthRole",
+      "StackName": "amplify-cloudassistant-devv-ea735",
+      "StackId": "arn:aws:cloudformation:us-east-1:590396138501:stack/amplify-cloudassistant-devv-ea735/5477c010-31ae-11f0-8450-0affc932e23d",
+      "AmplifyAppId": "dk6d8l22qwnmh"
+    }
+  },
+  "auth": {
+    "cloudassistant5f9da4ae": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": "8",
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/auth/cloudassistant5f9da4ae-cloudformation-template.json",
+        "logicalId": "authcloudassistant5f9da4ae"
+      },
+      "lastPushTimeStamp": "2025-05-18T14:44:24.271Z",
+      "output": {
+        "UserPoolId": "us-east-1_b4UwvYLrp",
+        "AppClientIDWeb": "5je1006dce8b2qqnubvnab9dbf",
+        "AppClientID": "1mj6r1merd4qs6cebcleiqm33g",
+        "IdentityPoolId": "us-east-1:60c0fdc0-344d-4bb7-8be0-af090e44e992",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:590396138501:userpool/us-east-1_b4UwvYLrp",
+        "IdentityPoolName": "cloudassistant5f9da4ae_identitypool_5f9da4ae__devv",
+        "UserPoolName": "cloudassistant5f9da4ae_userpool_5f9da4ae"
+      },
+      "lastPushDirHash": "ZEVKzPZTll7yBoRr9xP8oKVdZBE="
+    }
+  },
+  "api": {
+    "AdminQueries": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "cloudassistant5f9da4ae",
+          "attributes": [
+            "UserPoolId"
+          ]
+        },
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesd85216a5",
+          "attributes": [
+            "Arn",
+            "Name"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/api/AdminQueries-cloudformation-template.json",
+        "logicalId": "apiAdminQueries"
+      },
+      "lastPushTimeStamp": "2025-05-18T14:44:24.271Z",
+      "output": {
+        "ApiName": "AdminQueries",
+        "RootUrl": "https://w3rzp495h9.execute-api.us-east-1.amazonaws.com/devv",
+        "ApiId": "w3rzp495h9"
+      },
+      "lastPushDirHash": "ui46c1D8LaDAq45EYy4o/i+BBWM="
+    }
+  },
+  "function": {
+    "AdminQueriesd85216a5": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "cloudassistant5f9da4ae",
+          "attributes": [
+            "UserPoolId"
+          ]
+        }
+      ],
+      "lastBuildTimeStamp": "2025-05-18T14:41:10.517Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2025-05-18T14:41:11.857Z",
+      "distZipFilename": "AdminQueriesd85216a5-56574350447836772b4e-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-cloudassistant-devv-ea735-deployment",
+        "s3Key": "amplify-builds/AdminQueriesd85216a5-56574350447836772b4e-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/function/AdminQueriesd85216a5-cloudformation-template.json",
+        "logicalId": "functionAdminQueriesd85216a5"
+      },
+      "lastPushTimeStamp": "2025-05-18T14:44:24.271Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::590396138501:role/AdminQueriesd85216a5LambdaRole-devv",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:590396138501:function:AdminQueriesd85216a5-devv",
+        "Name": "AdminQueriesd85216a5-devv",
+        "LambdaExecutionRole": "AdminQueriesd85216a5LambdaRole-devv"
+      },
+      "lastPushDirHash": "3Lf52bguyqs3SwK8NSTfKwd9d2A="
+    }
+  }
+}

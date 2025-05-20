@@ -32,6 +32,18 @@
     "categories": {
       "auth": {
         "cloudassistant5f9da4ae": {}
+<<<<<<< HEAD
+=======
+      },
+      "function": {
+        "AdminQueriesd85216a5": {
+          "deploymentBucketName": "amplify-cloudassistant-devv-ea735-deployment",
+          "s3Key": "amplify-builds/AdminQueriesd85216a5-56574350447836772b4e-build.zip"
+        }
+      },
+      "api": {
+        "AdminQueries": {}
+>>>>>>> temp-branch
       }
     }
   }
