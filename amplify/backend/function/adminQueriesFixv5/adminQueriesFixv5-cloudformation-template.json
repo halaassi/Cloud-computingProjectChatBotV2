@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "AdminQueriesNew",
+            "adminQueriesFixv5",
             {
               "Fn::Join": [
                 "",
                 [
-                  "AdminQueriesNew",
+                  "adminQueriesFixv5",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "cloudassistantLambdaRoledc868f51",
+            "cloudassistantLambdaRole02053bb4",
             {
               "Fn::Join": [
                 "",
                 [
-                  "cloudassistantLambdaRoledc868f51",
+                  "cloudassistantLambdaRole02053bb4",
                   "-",
                   {
                     "Ref": "env"

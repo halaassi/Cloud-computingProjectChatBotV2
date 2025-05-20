@@ -42,7 +42,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/auth/cloudassistant5f9da4ae-cloudformation-template.json",
         "logicalId": "authcloudassistant5f9da4ae"
       },
-      "lastPushTimeStamp": "2025-05-20T20:34:22.037Z",
+      "lastPushTimeStamp": "2025-05-20T20:43:05.095Z",
       "output": {
         "UserPoolId": "us-east-1_b4UwvYLrp",
         "AppClientIDWeb": "5je1006dce8b2qqnubvnab9dbf",
@@ -57,31 +57,31 @@
   },
   "api": {},
   "function": {
-    "AdminQueriesNew": {
+    "adminQueriesFixv5": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2025-05-20T20:32:11.886Z",
+      "lastBuildTimeStamp": "2025-05-20T20:41:26.739Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2025-05-20T20:32:11.923Z",
-      "distZipFilename": "AdminQueriesNew-4c686f2f6d306c413631-build.zip",
+      "lastPackageTimeStamp": "2025-05-20T20:41:26.845Z",
+      "distZipFilename": "adminQueriesFixv5-32395778783579472f4f-build.zip",
       "s3Bucket": {
         "deploymentBucketName": "amplify-cloudassistant-devv-ea735-deployment",
-        "s3Key": "amplify-builds/AdminQueriesNew-4c686f2f6d306c413631-build.zip"
+        "s3Key": "amplify-builds/adminQueriesFixv5-32395778783579472f4f-build.zip"
       },
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/function/AdminQueriesNew-cloudformation-template.json",
-        "logicalId": "functionAdminQueriesNew"
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/function/adminQueriesFixv5-cloudformation-template.json",
+        "logicalId": "functionadminQueriesFixv5"
       },
-      "lastPushTimeStamp": "2025-05-20T20:34:22.037Z",
+      "lastPushTimeStamp": "2025-05-20T20:43:06.150Z",
       "output": {
-        "LambdaExecutionRoleArn": "arn:aws:iam::590396138501:role/cloudassistantLambdaRoledc868f51-devv",
+        "LambdaExecutionRoleArn": "arn:aws:iam::590396138501:role/cloudassistantLambdaRole02053bb4-devv",
         "Region": "us-east-1",
-        "Arn": "arn:aws:lambda:us-east-1:590396138501:function:AdminQueriesNew-devv",
-        "Name": "AdminQueriesNew-devv",
-        "LambdaExecutionRole": "cloudassistantLambdaRoledc868f51-devv"
+        "Arn": "arn:aws:lambda:us-east-1:590396138501:function:adminQueriesFixv5-devv",
+        "Name": "adminQueriesFixv5-devv",
+        "LambdaExecutionRole": "cloudassistantLambdaRole02053bb4-devv"
       },
-      "lastPushDirHash": "V0BObeAp70vb7SaymCQJIGOvQ7M="
+      "lastPushDirHash": "9IZrCN5P27CLtEfx6AE8Sv/q5+A="
     }
   }
 }

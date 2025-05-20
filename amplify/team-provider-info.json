@@ -34,9 +34,9 @@
         "cloudassistant5f9da4ae": {}
       },
       "function": {
-        "AdminQueriesNew": {
+        "adminQueriesFixv5": {
           "deploymentBucketName": "amplify-cloudassistant-devv-ea735-deployment",
-          "s3Key": "amplify-builds/AdminQueriesNew-4c686f2f6d306c413631-build.zip"
+          "s3Key": "amplify-builds/adminQueriesFixv5-32395778783579472f4f-build.zip"
         }
       }
     }

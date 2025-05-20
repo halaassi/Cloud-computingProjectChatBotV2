@@ -29,26 +29,26 @@
     }
   },
   "function": {
-    "AdminQueriesNew": {
+    "adminQueriesFixv5": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_AdminQueriesNew_deploymentBucketName": {
+    "AMPLIFY_function_adminQueriesFixv5_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "AdminQueriesNew"
+          "resourceName": "adminQueriesFixv5"
         }
       ]
     },
-    "AMPLIFY_function_AdminQueriesNew_s3Key": {
+    "AMPLIFY_function_adminQueriesFixv5_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "AdminQueriesNew"
+          "resourceName": "adminQueriesFixv5"
         }
       ]
     }
