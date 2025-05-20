@@ -5,7 +5,9 @@ import Signup from './Signup';
 import Login from './Login';
 import { Amplify } from 'aws-amplify';
 import awsExports from './aws-exports';
-
+import ForgotPasswordEmail from './ForgotPasswordEmail';
+import ForgotPasswordCode from './ForgotPasswordCode';
+import ForgotPasswordNew from './ForgotPasswordNew';
 awsExports.Auth = {
   region: awsExports.aws_project_region,
   userPoolId: awsExports.aws_user_pools_id,
@@ -24,6 +26,10 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/chat" element={<ChatPage />} />
+<Route path="/forgot-password" element={<ForgotPasswordEmail />} />
+<Route path="/verify-code" element={<ForgotPasswordCode />} />
+<Route path="/set-new-password" element={<ForgotPasswordNew />} />
+
       </Routes>
     </Router>
   );
