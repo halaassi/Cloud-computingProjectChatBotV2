@@ -32,8 +32,6 @@
     "categories": {
       "auth": {
         "cloudassistant5f9da4ae": {}
-<<<<<<< HEAD
-=======
       },
       "function": {
         "AdminQueriesd85216a5": {
@@ -43,7 +41,6 @@
       },
       "api": {
         "AdminQueries": {}
->>>>>>> temp-branch
       }
     }
   }
