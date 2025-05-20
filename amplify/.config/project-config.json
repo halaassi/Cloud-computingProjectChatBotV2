@@ -14,5 +14,7 @@
   },
   "providers": [
     "awscloudformation"
-  ]
+    
+  ],
+  "amplifyAppId": "d3okkig8osnyx5"
 }
