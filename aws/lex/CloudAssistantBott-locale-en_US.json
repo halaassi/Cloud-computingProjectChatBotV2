@@ -1,0 +1,23 @@
+{
+    "botId": "DD47GHPD6E",
+    "botVersion": "DRAFT",
+    "localeId": "en_US",
+    "localeName": "English (US)",
+    "nluIntentConfidenceThreshold": 0.4,
+    "intentsCount": 5,
+    "slotTypesCount": 1,
+    "botLocaleStatus": "Built",
+    "creationDateTime": "2025-05-15T21:47:00.586000+03:00",
+    "lastUpdatedDateTime": "2025-05-15T21:47:03.744000+03:00",
+    "lastBuildSubmittedDateTime": "2025-05-20T16:18:58.919000+03:00",
+    "generativeAISettings": {
+        "buildtimeSettings": {
+            "descriptiveBotBuilder": {
+                "enabled": true,
+                "bedrockModelSpecification": {
+                    "modelArn": "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-v2"
+                }
+            }
+        }
+    }
+}

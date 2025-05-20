@@ -1,0 +1,16 @@
+{
+    "botId": "DD47GHPD6E",
+    "botName": "CloudAssistantBott",
+    "roleArn": "arn:aws:iam::590396138501:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_Amazon_Lex",
+    "dataPrivacy": {
+        "childDirected": false
+    },
+    "idleSessionTTLInSeconds": 300,
+    "botStatus": "Available",
+    "creationDateTime": "2025-05-15T21:46:45.419000+03:00",
+    "lastUpdatedDateTime": "2025-05-15T21:46:45.419000+03:00",
+    "botType": "Bot",
+    "errorLogSettings": {
+        "enabled": false
+    }
+}
