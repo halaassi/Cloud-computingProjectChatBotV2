@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { confirmResetPassword } from '@aws-amplify/auth';
-
+import './ForgotPasswordNew.css';
 export default function ForgotPasswordNew() {
   const [newPassword, setNewPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const email = localStorage.getItem('resetEmail');
-  const code = localStorage.getItem('resetCode');
+  const email = location.state?.email;
+  const code = location.state?.code;
 
   useEffect(() => {
     if (!email || !code) {
@@ -27,9 +28,6 @@ export default function ForgotPasswordNew() {
       });
 
       setSuccess('✅ Password reset successfully! Redirecting...');
-      localStorage.removeItem('resetEmail');
-      localStorage.removeItem('resetCode');
-
       setTimeout(() => navigate('/'), 2000);
     } catch (err) {
       console.error('Reset error:', err);
@@ -38,22 +36,28 @@ export default function ForgotPasswordNew() {
   };
 
   return (
-    <div className="p-4 max-w-sm mx-auto">
-      <h2 className="text-xl font-bold mb-4">Set New Password</h2>
-      {error && <p className="text-red-500">{error}</p>}
-      {success && <p className="text-green-600">{success}</p>}
-      <input
-        type="password"
-        className="border p-2 w-full mb-2"
-        placeholder="New password"
-        onChange={(e) => setNewPassword(e.target.value)}
-      />
-      <button
-        className="bg-green-600 text-white px-4 py-2 rounded w-full"
-        onClick={handleReset}
-      >
-        Reset Password
-      </button>
-    </div>
+    <div className="reset-container">
+  <div className="reset-box">
+    <h2 className="reset-title">Set New Password</h2>
+
+    {error && <p className="reset-error">{error}</p>}
+    {success && <p className="reset-success">{success}</p>}
+
+    <input
+      type="password"
+      className="reset-input"
+      placeholder="New password"
+      onChange={(e) => setNewPassword(e.target.value)}
+    />
+
+    <button
+      className="reset-button"
+      onClick={handleReset}
+    >
+      Reset Password
+    </button>
+  </div>
+</div>
+
   );
 }

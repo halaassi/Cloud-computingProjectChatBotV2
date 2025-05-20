@@ -1,80 +1,103 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-# Cloud-computing-
-=======
->>>>>>> temp-branch
-# Getting Started with Create React App
+#  Cloud Assistant – Serverless Conversational AI with AWS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##  Project Description
+Cloud Assistant is an interactive web application that acts as a cloud assistant for users, allowing them to perform AWS commands through natural language conversation using Amazon Lex. The project is built using a serverless architecture and relies on AWS services such as Amplify, Lambda, Lex, and Cognito.
 
-## Available Scripts
+##  Architecture Diagram
+```
+[User] --> [React Frontend (Amplify Hosting)]
+          --> [Amazon Lex Bot] --> [AWS Lambda Functions]
+                                 --> [AWS Services (EC2, S3, etc.)]
+          --> [Cognito for Auth]
+          --> [GraphQL API (AppSync)] --> [DynamoDB]
+```
 
-In the project directory, you can run:
+## Team Structure
+- **Backend:** Responsible for Lambda and AppSync
+- **Frontend:** Developed using React and Amplify
+- **DevOps:** Handled centralized account and CI/CD
+- **TeamAdmin:** Managed IAM and user roles
+- The project was deployed from a central AWS account, with IAM users created per role.
 
-### `npm start`
+## Features
+- User authentication via Amazon Cognito
+- Natural language chat interface using Amazon Lex
+- Perform AWS tasks like:
+  - `ListEC2Instances`
+  - `DescribeS3Intentt`
+  - `CreateEC2InstanceIntent`
+- Store user data using DynamoDB
+- Fully responsive UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##  Tech Stack
+- React.js + AWS Amplify
+- Amazon Lex
+- AWS Lambda
+- Amazon Cognito
+- AWS AppSync (GraphQL)
+- DynamoDB
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  Setup Instructions
 
-### `npm test`
+### 1. Clone Repository
+```bash
+git clone https://github.com/halaassi/Cloud-computingProjectChatBotV2.git
+cd Cloud-computingProjectChatBotV2
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Install Amplify CLI
+```bash
+npm install -g @aws-amplify/cli
+amplify configure
+```
 
-### `npm run build`
+### 3. Set up Amplify Project
+```bash
+amplify init
+amplify push
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. Start the App
+```bash
+npm install
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##  IAM and Access Control
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Centralized AWS Account:
+- A single master account was used with:
+  - IAM Groups created:
+    - FrontendDevelopers
+    - BackendDevelopers
+    - DevOps
+  - Permissions assigned based on team roles
+  - Each role had a dedicated IAM user
 
-### `npm run eject`
+### Example Policies:
+- Frontend: `AmazonCognitoPowerUser`, `AmazonQDeveloperAccess`
+- Backend: `AWSLambda_FullAccess`, `AWSAppSyncAdministrator`
+- DevOps: `AWSCloudFormationFullAccess`, `IAMFullAccess`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Lex Intents
+| Intent Name               | Description                         |
+|---------------------      |-------------------------------------|
+| `ListEC2Instances`        | Lists active EC2 instances          |
+| `DescribeS3Intentt`       | Describes available S3 Buckets      |
+| `CreateEC2InstanceIntent` | Create EC2 Instance                 |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Screenshots
+(Add screenshots showing app in action, especially Lex bot interactions)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Example Use
+> **User:** Show s3 
+> **Bot:** You have 7 S3 bucket(s): amplify-cloudassistant-dev-1e80f-deployment, amplify-cloudassistant-dev-30a00-deployment, amplify-cloudassistant-dev-d6909-deployment, amplify-cloudassistant-devv-ea735-deployment, amplify-cloudbackend-dev-19d58-deployment, amplify-ecommerce-dev-10f8b-deployment, amplify-taskmanagerapp-dev-e77bf-deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Deployment
+```bash
+amplify publish
+```
+Or set up CI/CD by connecting your Git branch to the AWS Amplify Console.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-<<<<<<< HEAD
-=======
->>>>>>> 1bc999f (chatbot)
->>>>>>> temp-branch

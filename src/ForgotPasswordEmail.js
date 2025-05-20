@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { resetPassword } from '@aws-amplify/auth';
-
+import './ForgotPasswordEmail.css'; 
 export default function ForgotPasswordEmail() {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
@@ -10,30 +10,44 @@ export default function ForgotPasswordEmail() {
   const handleSendCode = async () => {
     setError('');
     try {
-      await resetPassword({ username: email });
-      localStorage.setItem('resetEmail', email); // حفظ الإيميل
-      navigate('/verify-code');
+      await resetPassword({ username: email.trim() });
+      localStorage.setItem('resetEmail', email);
+      navigate('/verify-code', { state: { email } }); 
     } catch (err) {
-      setError(err.message || 'Failed to send code.');
-    }
+  console.error('❌ Forgot password error:', err);
+  if (err.code === 'UserNotFoundException') {
+    setError('This email is not registered.');
+  } else if (err.code === 'InvalidParameterException') {
+    setError('Please confirm your account before resetting password.');
+  } else {
+    setError(err.message || 'Failed to send code.');
+  }
+}
   };
 
   return (
-    <div className="p-4 max-w-sm mx-auto">
-      <h2 className="text-xl font-bold mb-4">Forgot Password</h2>
-      {error && <p className="text-red-500">{error}</p>}
-      <input
-        type="email"
-        className="border p-2 w-full mb-2"
-        placeholder="Enter your email"
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <button
-        className="bg-blue-600 text-white px-4 py-2 rounded w-full"
-        onClick={handleSendCode}
-      >
-        Send Verification Code
-      </button>
-    </div>
+  <div className="forgot-container">
+  <div className="forgot-box">
+    <h2 className="forgot-title">Forgot Password</h2>
+
+    {error && <p className="forgot-error">{error}</p>}
+
+    <input
+      type="email"
+      className="forgot-input"
+      placeholder="Enter your email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+    />
+
+    <button className="forgot-button" onClick={handleSendCode}>
+      Send Verification Code
+    </button>
+
+    <button className="forgot-link" onClick={() => navigate('/login')}>
+      Back to Login
+    </button>
+  </div>
+</div>
   );
 }
