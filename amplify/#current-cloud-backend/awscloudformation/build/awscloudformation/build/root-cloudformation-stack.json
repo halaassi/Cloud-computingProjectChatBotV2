@@ -202,10 +202,10 @@
     "authcloudassistant5f9da4ae": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/auth/cloudassistant5f9da4ae-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-mainenv-f1d48-deployment/amplify-cfn-templates/auth/cloudassistant5f9da4ae-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "cloudassistant5f9da4ae_identitypool_5f9da4ae",
-          "allowUnauthenticatedIdentities": true,
+          "allowUnauthenticatedIdentities": false,
           "resourceNameTruncated": "clouda5f9da4ae",
           "userPoolName": "cloudassistant5f9da4ae_userpool_5f9da4ae",
           "autoVerifiedAttributes": "email",
@@ -215,7 +215,7 @@
           "smsVerificationMessage": "Your verification code is {####}",
           "emailVerificationSubject": "Verify your email for Cloud Assistant",
           "emailVerificationMessage": "Your verification code is {####}",
-          "defaultPasswordPolicy": false,
+          "defaultPasswordPolicy": true,
           "passwordPolicyMinLength": "8",
           "passwordPolicyCharacters": "",
           "requiredAttributes": "email",
@@ -225,7 +225,7 @@
           "userpoolClientWriteAttributes": "family_name,email",
           "userpoolClientReadAttributes": "email",
           "userpoolClientLambdaRole": "clouda5f9da4ae_userpoolclient_lambda_role",
-          "userpoolClientSetAttributes": false,
+          "userpoolClientSetAttributes": true,
           "sharedId": "5f9da4ae",
           "resourceName": "cloudassistant5f9da4ae",
           "authSelections": "identityPoolAndUserPool",
@@ -251,7 +251,7 @@
           "dependsOn": "",
           "thirdPartyAuth": false,
           "userPoolGroups": false,
-          "adminQueries": false,
+          "adminQueries": true,
           "triggers": "{}",
           "hostedUI": false,
           "adminQueryGroup": "Admin",
@@ -260,18 +260,18 @@
             "Ref": "AWS::StackId"
           },
           "permissions": "",
-          "env": "devv"
+          "env": "mainenv"
         }
       }
     },
     "functionadminQueriesFixv5": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/function/adminQueriesFixv5-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-mainenv-f1d48-deployment/amplify-cfn-templates/function/adminQueriesFixv5-cloudformation-template.json",
         "Parameters": {
-          "deploymentBucketName": "amplify-cloudassistant-devv-ea735-deployment",
+          "deploymentBucketName": "amplify-cloudassistant-mainenv-f1d48-deployment",
           "s3Key": "amplify-builds/adminQueriesFixv5-32395778783579472f4f-build.zip",
-          "env": "devv"
+          "env": "mainenv"
         }
       }
     },

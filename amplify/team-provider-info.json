@@ -17,16 +17,16 @@
       }
     }
   },
-  "devv": {
+  "mainenv": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-cloudassistant-devv-ea735-authRole",
-      "UnauthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-devv-ea735-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-devv-ea735-authRole",
+      "AuthRoleName": "amplify-cloudassistant-mainenv-f1d48-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-mainenv-f1d48-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-mainenv-f1d48-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-cloudassistant-devv-ea735-deployment",
-      "UnauthRoleName": "amplify-cloudassistant-devv-ea735-unauthRole",
-      "StackName": "amplify-cloudassistant-devv-ea735",
-      "StackId": "arn:aws:cloudformation:us-east-1:590396138501:stack/amplify-cloudassistant-devv-ea735/5477c010-31ae-11f0-8450-0affc932e23d",
+      "DeploymentBucketName": "amplify-cloudassistant-mainenv-f1d48-deployment",
+      "UnauthRoleName": "amplify-cloudassistant-mainenv-f1d48-unauthRole",
+      "StackName": "amplify-cloudassistant-mainenv-f1d48",
+      "StackId": "arn:aws:cloudformation:us-east-1:590396138501:stack/amplify-cloudassistant-mainenv-f1d48/1cb4f370-35bc-11f0-9f50-127b1481de01",
       "AmplifyAppId": "d3okkig8osnyx5"
     },
     "categories": {
@@ -35,7 +35,7 @@
       },
       "function": {
         "adminQueriesFixv5": {
-          "deploymentBucketName": "amplify-cloudassistant-devv-ea735-deployment",
+          "deploymentBucketName": "amplify-cloudassistant-mainenv-f1d48-deployment",
           "s3Key": "amplify-builds/adminQueriesFixv5-32395778783579472f4f-build.zip"
         }
       }

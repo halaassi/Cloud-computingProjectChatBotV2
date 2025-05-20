@@ -1,9 +1,9 @@
 {
   "aws_project_region": "us-east-1",
-  "aws_cognito_identity_pool_id": "us-east-1:60c0fdc0-344d-4bb7-8be0-af090e44e992",
+  "aws_cognito_identity_pool_id": "us-east-1:37353068-4e5d-40ad-b1a3-cca0fcc72953",
   "aws_cognito_region": "us-east-1",
-  "aws_user_pools_id": "us-east-1_b4UwvYLrp",
-  "aws_user_pools_web_client_id": "5je1006dce8b2qqnubvnab9dbf",
+  "aws_user_pools_id": "us-east-1_C943iZcET",
+  "aws_user_pools_web_client_id": "5to2hjajde6kjollla6p0tchc7",
   "oauth": {},
   "aws_cognito_username_attributes": [
     "EMAIL"
@@ -22,12 +22,5 @@
   },
   "aws_cognito_verification_mechanisms": [
     "EMAIL"
-  ],
-  "aws_cloud_logic_custom": [
-    {
-      "name": "AdminQueries",
-      "endpoint": "https://w3rzp495h9.execute-api.us-east-1.amazonaws.com/devv",
-      "region": "us-east-1"
-    }
   ]
 }

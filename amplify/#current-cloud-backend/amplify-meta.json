@@ -1,17 +1,18 @@
 {
   "providers": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-cloudassistant-devv-ea735-authRole",
-      "UnauthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-devv-ea735-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-devv-ea735-authRole",
+      "AuthRoleName": "amplify-cloudassistant-mainenv-f1d48-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-mainenv-f1d48-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-mainenv-f1d48-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-cloudassistant-devv-ea735-deployment",
-      "UnauthRoleName": "amplify-cloudassistant-devv-ea735-unauthRole",
-      "StackName": "amplify-cloudassistant-devv-ea735",
-      "StackId": "arn:aws:cloudformation:us-east-1:590396138501:stack/amplify-cloudassistant-devv-ea735/5477c010-31ae-11f0-8450-0affc932e23d",
+      "DeploymentBucketName": "amplify-cloudassistant-mainenv-f1d48-deployment",
+      "UnauthRoleName": "amplify-cloudassistant-mainenv-f1d48-unauthRole",
+      "StackName": "amplify-cloudassistant-mainenv-f1d48",
+      "StackId": "arn:aws:cloudformation:us-east-1:590396138501:stack/amplify-cloudassistant-mainenv-f1d48/1cb4f370-35bc-11f0-9f50-127b1481de01",
       "AmplifyAppId": "d3okkig8osnyx5"
     }
   },
+  "api": {},
   "auth": {
     "cloudassistant5f9da4ae": {
       "customAuth": false,
@@ -39,47 +40,46 @@
       "providerPlugin": "awscloudformation",
       "service": "Cognito",
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/auth/cloudassistant5f9da4ae-cloudformation-template.json",
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-mainenv-f1d48-deployment/amplify-cfn-templates/auth/cloudassistant5f9da4ae-cloudformation-template.json",
         "logicalId": "authcloudassistant5f9da4ae"
       },
-      "lastPushTimeStamp": "2025-05-20T20:43:05.095Z",
+      "lastPushTimeStamp": "2025-05-20T21:00:05.613Z",
       "output": {
-        "UserPoolId": "us-east-1_b4UwvYLrp",
-        "AppClientIDWeb": "5je1006dce8b2qqnubvnab9dbf",
-        "AppClientID": "1mj6r1merd4qs6cebcleiqm33g",
-        "IdentityPoolId": "us-east-1:60c0fdc0-344d-4bb7-8be0-af090e44e992",
-        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:590396138501:userpool/us-east-1_b4UwvYLrp",
-        "IdentityPoolName": "cloudassistant5f9da4ae_identitypool_5f9da4ae__devv",
+        "UserPoolId": "us-east-1_C943iZcET",
+        "AppClientIDWeb": "5to2hjajde6kjollla6p0tchc7",
+        "AppClientID": "5r0p1mhk64eouehdq7c7n27ct7",
+        "IdentityPoolId": "us-east-1:37353068-4e5d-40ad-b1a3-cca0fcc72953",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:590396138501:userpool/us-east-1_C943iZcET",
+        "IdentityPoolName": "cloudassistant5f9da4ae_identitypool_5f9da4ae__mainenv",
         "UserPoolName": "cloudassistant5f9da4ae_userpool_5f9da4ae"
       },
       "lastPushDirHash": "2lmoqZ3xe7NTc5iJ1I856LFHwZM="
     }
   },
-  "api": {},
   "function": {
     "adminQueriesFixv5": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2025-05-20T20:41:26.739Z",
+      "lastBuildTimeStamp": "2025-05-20T20:58:26.529Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2025-05-20T20:41:26.845Z",
+      "lastPackageTimeStamp": "2025-05-20T20:58:26.578Z",
       "distZipFilename": "adminQueriesFixv5-32395778783579472f4f-build.zip",
       "s3Bucket": {
-        "deploymentBucketName": "amplify-cloudassistant-devv-ea735-deployment",
+        "deploymentBucketName": "amplify-cloudassistant-mainenv-f1d48-deployment",
         "s3Key": "amplify-builds/adminQueriesFixv5-32395778783579472f4f-build.zip"
       },
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-devv-ea735-deployment/amplify-cfn-templates/function/adminQueriesFixv5-cloudformation-template.json",
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-mainenv-f1d48-deployment/amplify-cfn-templates/function/adminQueriesFixv5-cloudformation-template.json",
         "logicalId": "functionadminQueriesFixv5"
       },
-      "lastPushTimeStamp": "2025-05-20T20:43:06.150Z",
+      "lastPushTimeStamp": "2025-05-20T21:00:05.613Z",
       "output": {
-        "LambdaExecutionRoleArn": "arn:aws:iam::590396138501:role/cloudassistantLambdaRole02053bb4-devv",
+        "LambdaExecutionRoleArn": "arn:aws:iam::590396138501:role/cloudassistantLambdaRole02053bb4-mainenv",
         "Region": "us-east-1",
-        "Arn": "arn:aws:lambda:us-east-1:590396138501:function:adminQueriesFixv5-devv",
-        "Name": "adminQueriesFixv5-devv",
-        "LambdaExecutionRole": "cloudassistantLambdaRole02053bb4-devv"
+        "Arn": "arn:aws:lambda:us-east-1:590396138501:function:adminQueriesFixv5-mainenv",
+        "Name": "adminQueriesFixv5-mainenv",
+        "LambdaExecutionRole": "cloudassistantLambdaRole02053bb4-mainenv"
       },
       "lastPushDirHash": "9IZrCN5P27CLtEfx6AE8Sv/q5+A="
     }

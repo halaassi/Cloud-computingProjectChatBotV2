@@ -4,9 +4,9 @@
     "useProfile": false,
     "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/NG9S2z9fGy"
   },
-  "devv": {
+  "mainenv": {
     "configLevel": "project",
     "useProfile": false,
-    "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/VvRDWwwPH1"
+    "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/GOY4DdqG3i"
   }
 }
