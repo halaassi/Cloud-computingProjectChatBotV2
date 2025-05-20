@@ -9,7 +9,7 @@
       "UnauthRoleName": "amplify-cloudassistant-dev-30a00-unauthRole",
       "StackName": "amplify-cloudassistant-dev-30a00",
       "StackId": "arn:aws:cloudformation:us-east-1:590396138501:stack/amplify-cloudassistant-dev-30a00/6d13ea10-31a2-11f0-8070-0affc9d5aeb7",
-      "AmplifyAppId": "dk6d8l22qwnmh"
+      "AmplifyAppId": "d3okkig8osnyx5"
     },
     "categories": {
       "auth": {
@@ -27,7 +27,8 @@
       "UnauthRoleName": "amplify-cloudassistant-devv-ea735-unauthRole",
       "StackName": "amplify-cloudassistant-devv-ea735",
       "StackId": "arn:aws:cloudformation:us-east-1:590396138501:stack/amplify-cloudassistant-devv-ea735/5477c010-31ae-11f0-8450-0affc932e23d",
-      "AmplifyAppId": "dk6d8l22qwnmh"
+       "AmplifyAppId": "d3okkig8osnyx5"
+
     },
     "categories": {
       "auth": {
