@@ -20,6 +20,11 @@
       },
       "auth": {
         "cloudassistant45c2be95": {}
+      },
+      "function": {
+        "listEC2Lambda": {},
+        "describeS3Lambda": {},
+        "handleLexChatLambda": {}
       }
     }
   }
