@@ -1,7 +1,6 @@
 {
-  "api": {},
   "auth": {
-    "cloudassistant5f9da4ae": {
+    "cloudassistant45c2be95": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -11,7 +10,7 @@
         ],
         "passwordProtectionSettings": {
           "passwordPolicyCharacters": [],
-          "passwordPolicyMinLength": "8"
+          "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
           "EMAIL"
@@ -26,31 +25,6 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
-    }
-  },
-  "function": {
-    "adminQueriesFixv5": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
-  "parameters": {
-    "AMPLIFY_function_adminQueriesFixv5_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "adminQueriesFixv5"
-        }
-      ]
-    },
-    "AMPLIFY_function_adminQueriesFixv5_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "adminQueriesFixv5"
-        }
-      ]
     }
   }
 }

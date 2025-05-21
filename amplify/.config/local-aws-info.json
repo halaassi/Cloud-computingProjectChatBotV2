@@ -8,5 +8,10 @@
     "configLevel": "project",
     "useProfile": false,
     "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/GOY4DdqG3i"
+  },
+  "devv": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/CB1TDHaIo6"
   }
 }

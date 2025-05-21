@@ -1,9 +1,9 @@
 {
   "aws_project_region": "us-east-1",
-  "aws_cognito_identity_pool_id": "us-east-1:37353068-4e5d-40ad-b1a3-cca0fcc72953",
+  "aws_cognito_identity_pool_id": "us-east-1:b801b14b-ccf1-4dbb-b025-7fe19c7e9598",
   "aws_cognito_region": "us-east-1",
-  "aws_user_pools_id": "us-east-1_C943iZcET",
-  "aws_user_pools_web_client_id": "5to2hjajde6kjollla6p0tchc7",
+  "aws_user_pools_id": "us-east-1_bvZb6your",
+  "aws_user_pools_web_client_id": "3ta59q61ejkldo4poefa8ebve5",
   "oauth": {},
   "aws_cognito_username_attributes": [
     "EMAIL"
@@ -17,7 +17,7 @@
     "SMS"
   ],
   "aws_cognito_password_protection_settings": {
-    "passwordPolicyMinLength": "8",
+    "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": []
   },
   "aws_cognito_verification_mechanisms": [

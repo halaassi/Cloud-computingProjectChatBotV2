@@ -199,37 +199,37 @@
         }
       }
     },
-    "authcloudassistant5f9da4ae": {
+    "authcloudassistant45c2be95": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-mainenv-f1d48-deployment/amplify-cfn-templates/auth/cloudassistant5f9da4ae-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-dev-30a00-deployment/amplify-cfn-templates/auth/cloudassistant45c2be95-cloudformation-template.json",
         "Parameters": {
-          "identityPoolName": "cloudassistant5f9da4ae_identitypool_5f9da4ae",
+          "identityPoolName": "cloudassistant45c2be95_identitypool_45c2be95",
           "allowUnauthenticatedIdentities": false,
-          "resourceNameTruncated": "clouda5f9da4ae",
-          "userPoolName": "cloudassistant5f9da4ae_userpool_5f9da4ae",
+          "resourceNameTruncated": "clouda45c2be95",
+          "userPoolName": "cloudassistant45c2be95_userpool_45c2be95",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
           "smsAuthenticationMessage": "Your authentication code is {####}",
           "smsVerificationMessage": "Your verification code is {####}",
-          "emailVerificationSubject": "Verify your email for Cloud Assistant",
+          "emailVerificationSubject": "Your verification code",
           "emailVerificationMessage": "Your verification code is {####}",
-          "defaultPasswordPolicy": true,
-          "passwordPolicyMinLength": "8",
+          "defaultPasswordPolicy": false,
+          "passwordPolicyMinLength": 8,
           "passwordPolicyCharacters": "",
           "requiredAttributes": "email",
           "aliasAttributes": "",
           "userpoolClientGenerateSecret": false,
           "userpoolClientRefreshTokenValidity": 30,
-          "userpoolClientWriteAttributes": "family_name,email",
+          "userpoolClientWriteAttributes": "email",
           "userpoolClientReadAttributes": "email",
-          "userpoolClientLambdaRole": "clouda5f9da4ae_userpoolclient_lambda_role",
-          "userpoolClientSetAttributes": true,
-          "sharedId": "5f9da4ae",
-          "resourceName": "cloudassistant5f9da4ae",
+          "userpoolClientLambdaRole": "clouda45c2be95_userpoolclient_lambda_role",
+          "userpoolClientSetAttributes": false,
+          "sharedId": "45c2be95",
+          "resourceName": "cloudassistant45c2be95",
           "authSelections": "identityPoolAndUserPool",
-          "useDefault": "manual",
+          "useDefault": "default",
           "usernameAttributes": "email",
           "userPoolGroupList": "",
           "serviceName": "Cognito",
@@ -249,29 +249,7 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
-          "thirdPartyAuth": false,
-          "userPoolGroups": false,
-          "adminQueries": true,
-          "triggers": "{}",
-          "hostedUI": false,
-          "adminQueryGroup": "Admin",
-          "authProviders": "",
-          "parentStack": {
-            "Ref": "AWS::StackId"
-          },
-          "permissions": "",
-          "env": "mainenv"
-        }
-      }
-    },
-    "functionadminQueriesFixv5": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-mainenv-f1d48-deployment/amplify-cfn-templates/function/adminQueriesFixv5-cloudformation-template.json",
-        "Parameters": {
-          "deploymentBucketName": "amplify-cloudassistant-mainenv-f1d48-deployment",
-          "s3Key": "amplify-builds/adminQueriesFixv5-32395778783579472f4f-build.zip",
-          "env": "mainenv"
+          "env": "dev"
         }
       }
     },
@@ -279,7 +257,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authcloudassistant5f9da4ae"
+        "authcloudassistant45c2be95"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -389,7 +367,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authcloudassistant5f9da4ae",
+            "authcloudassistant45c2be95",
             "Outputs.IdentityPoolId"
           ]
         },

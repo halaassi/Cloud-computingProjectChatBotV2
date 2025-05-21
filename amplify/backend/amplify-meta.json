@@ -1,87 +1,76 @@
 {
   "providers": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-cloudassistant-mainenv-f1d48-authRole",
-      "UnauthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-mainenv-f1d48-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-mainenv-f1d48-authRole",
+      "AuthRoleName": "amplify-cloudassistant-dev-30a00-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-dev-30a00-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590396138501:role/amplify-cloudassistant-dev-30a00-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-cloudassistant-mainenv-f1d48-deployment",
-      "UnauthRoleName": "amplify-cloudassistant-mainenv-f1d48-unauthRole",
-      "StackName": "amplify-cloudassistant-mainenv-f1d48",
-      "StackId": "arn:aws:cloudformation:us-east-1:590396138501:stack/amplify-cloudassistant-mainenv-f1d48/1cb4f370-35bc-11f0-9f50-127b1481de01",
-      "AmplifyAppId": "d3okkig8osnyx5"
+      "DeploymentBucketName": "amplify-cloudassistant-dev-30a00-deployment",
+      "UnauthRoleName": "amplify-cloudassistant-dev-30a00-unauthRole",
+      "StackName": "amplify-cloudassistant-dev-30a00",
+      "StackId": "arn:aws:cloudformation:us-east-1:590396138501:stack/amplify-cloudassistant-dev-30a00/6d13ea10-31a2-11f0-8070-0affc9d5aeb7",
+      "AmplifyAppId": "dk6d8l22qwnmh"
     }
   },
-  "api": {},
   "auth": {
-    "cloudassistant5f9da4ae": {
-      "customAuth": false,
+    "cloudassistant45c2be95": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
       "dependsOn": [],
+      "customAuth": false,
       "frontendAuthConfig": {
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyMinLength": "8",
-          "passwordPolicyCharacters": []
-        },
-        "signupAttributes": [
-          "EMAIL"
-        ],
         "socialProviders": [],
         "usernameAttributes": [
           "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
         ],
         "verificationMechanisms": [
           "EMAIL"
         ]
       },
-      "providerPlugin": "awscloudformation",
-      "service": "Cognito",
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-mainenv-f1d48-deployment/amplify-cfn-templates/auth/cloudassistant5f9da4ae-cloudformation-template.json",
-        "logicalId": "authcloudassistant5f9da4ae"
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-dev-30a00-deployment/amplify-cfn-templates/auth/cloudassistant45c2be95-cloudformation-template.json",
+        "logicalId": "authcloudassistant45c2be95"
       },
-      "lastPushTimeStamp": "2025-05-20T21:00:05.613Z",
+      "lastPushTimeStamp": "2025-05-20T22:48:13.662Z",
       "output": {
-        "UserPoolId": "us-east-1_C943iZcET",
-        "AppClientIDWeb": "5to2hjajde6kjollla6p0tchc7",
-        "AppClientID": "5r0p1mhk64eouehdq7c7n27ct7",
-        "IdentityPoolId": "us-east-1:37353068-4e5d-40ad-b1a3-cca0fcc72953",
-        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:590396138501:userpool/us-east-1_C943iZcET",
-        "IdentityPoolName": "cloudassistant5f9da4ae_identitypool_5f9da4ae__mainenv",
-        "UserPoolName": "cloudassistant5f9da4ae_userpool_5f9da4ae"
+        "UserPoolId": "us-east-1_bvZb6your",
+        "AppClientIDWeb": "3ta59q61ejkldo4poefa8ebve5",
+        "AppClientID": "2h1cmtu7v8fqvgjvfcm1iohfgc",
+        "IdentityPoolId": "us-east-1:b801b14b-ccf1-4dbb-b025-7fe19c7e9598",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:590396138501:userpool/us-east-1_bvZb6your",
+        "IdentityPoolName": "cloudassistant45c2be95_identitypool_45c2be95__dev",
+        "UserPoolName": "cloudassistant45c2be95_userpool_45c2be95"
       },
-      "lastPushDirHash": "2lmoqZ3xe7NTc5iJ1I856LFHwZM="
+      "lastPushDirHash": "tz3onTqXiXMrLYd7AJ5TjmyOalk="
     }
   },
-  "function": {
-    "adminQueriesFixv5": {
-      "build": true,
+  "api": {
+    "cloudassistant": {
+      "service": "AppSync",
       "providerPlugin": "awscloudformation",
-      "service": "Lambda",
-      "lastBuildTimeStamp": "2025-05-20T20:58:26.529Z",
-      "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2025-05-20T20:58:26.578Z",
-      "distZipFilename": "adminQueriesFixv5-32395778783579472f4f-build.zip",
-      "s3Bucket": {
-        "deploymentBucketName": "amplify-cloudassistant-mainenv-f1d48-deployment",
-        "s3Key": "amplify-builds/adminQueriesFixv5-32395778783579472f4f-build.zip"
-      },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cloudassistant-mainenv-f1d48-deployment/amplify-cfn-templates/function/adminQueriesFixv5-cloudformation-template.json",
-        "logicalId": "functionadminQueriesFixv5"
-      },
-      "lastPushTimeStamp": "2025-05-20T21:00:05.613Z",
+      "dependsOn": [],
       "output": {
-        "LambdaExecutionRoleArn": "arn:aws:iam::590396138501:role/cloudassistantLambdaRole02053bb4-mainenv",
-        "Region": "us-east-1",
-        "Arn": "arn:aws:lambda:us-east-1:590396138501:function:adminQueriesFixv5-mainenv",
-        "Name": "adminQueriesFixv5-mainenv",
-        "LambdaExecutionRole": "cloudassistantLambdaRole02053bb4-mainenv"
-      },
-      "lastPushDirHash": "9IZrCN5P27CLtEfx6AE8Sv/q5+A="
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
     }
   }
 }
