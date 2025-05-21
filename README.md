@@ -4,13 +4,9 @@
 Cloud Assistant is an interactive web application that acts as a cloud assistant for users, allowing them to perform AWS commands through natural language conversation using Amazon Lex. The project is built using a serverless architecture and relies on AWS services such as Amplify, Lambda, Lex, and Cognito.
 
 ##  Architecture Diagram
-```
-[User] --> [React Frontend (Amplify Hosting)]
-          --> [Amazon Lex Bot] --> [AWS Lambda Functions]
-                                 --> [AWS Services (EC2, S3, etc.)]
-          --> [Cognito for Auth]
-          --> [GraphQL API (AppSync)] --> [DynamoDB]
-```
+![image](https://github.com/user-attachments/assets/9c32c0d5-daaf-485d-a281-12951a1fccea)
+
+
 
 ## Team Structure
 - **Backend:** Responsible for Lambda and AppSync
@@ -25,7 +21,6 @@ Cloud Assistant is an interactive web application that acts as a cloud assistant
 - Perform AWS tasks like:
   - `ListEC2Instances`
   - `DescribeS3Intentt`
-  - `CreateEC2InstanceIntent`
 - Store user data using DynamoDB
 - Fully responsive UI
 
@@ -84,7 +79,6 @@ npm start
 |---------------------      |-------------------------------------|
 | `ListEC2Instances`        | Lists active EC2 instances          |
 | `DescribeS3Intentt`       | Describes available S3 Buckets      |
-| `CreateEC2InstanceIntent` | Create EC2 Instance                 |
 
 ## Screenshots
 (Add screenshots showing app in action, especially Lex bot interactions)
@@ -100,4 +94,7 @@ amplify publish
 ```
 Or set up CI/CD by connecting your Git branch to the AWS Amplify Console.
 
+## 🎬 Project Demo Link
+
+[![Watch the Demo Video](https://img.shields.io/badge/Watch-Demo-blue?style=for-the-badge&logo=google-drive)](https://drive.google.com/file/d/12npazFxMFL-NWyc6nGo5KX72izeiV4nR/view?usp=sharing)
 
