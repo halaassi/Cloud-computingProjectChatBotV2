@@ -1,0 +1,23 @@
+type ChatResponse {
+  userMessage: String!
+  botReply: String!
+}
+
+type Message {
+  id: ID!
+  userId: String!
+  text: String!
+  response: String
+  createdAt: AWSDateTime!
+}
+
+type Mutation {
+  sendChatMessage(input: String!): ChatResponse!
+  @aws_cognito_user_pools
+}
+
+type Query {
+  listMessages: [Message!]!
+  listInstances: AWSJSON
+  describeBuckets: AWSJSON
+}

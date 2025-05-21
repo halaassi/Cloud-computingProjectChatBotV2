@@ -10,6 +10,17 @@
       "StackName": "amplify-cloudassistant-main-78bd8",
       "StackId": "arn:aws:cloudformation:us-east-1:590396138501:stack/amplify-cloudassistant-main-78bd8/570e93d0-361d-11f0-84e3-0affe31d6205",
       "AmplifyAppId": "dk6d8l22qwnmh"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dk6d8l22qwnmh",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "cloudassistant45c2be95": {}
+      }
     }
   }
 }

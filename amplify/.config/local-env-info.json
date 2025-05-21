@@ -1,6 +1,5 @@
 {
   "projectPath": "/Users/halaassi/Desktop/cloud-assistant",
-  "envName": "devv",
-  "defaultEditor": "vscode",
-  "noUpdateBackend": true
+  "envName": "main",
+  "defaultEditor": "vscode"
 }
