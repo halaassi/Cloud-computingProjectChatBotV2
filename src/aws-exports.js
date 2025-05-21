@@ -1,12 +1,28 @@
-// src/aws-exports.js
 const awsmobile = {
-  aws_project_region: 'us-east-1',
-  aws_cognito_region: 'us-east-1',
-  aws_user_pools_id: 'us-east-1_oLYha27XT',
-  aws_user_pools_web_client_id: 'peteg0p0vg1a3ket7e4o8p35s',
-  aws_appsync_graphqlEndpoint: 'https://4felb3kfyjbyxexcjlfdeedppi.appsync-api.us-east-1.amazonaws.com/graphql',
-  aws_appsync_region: 'us-east-1',
-  aws_appsync_authenticationType: 'AMAZON_COGNITO_USER_POOLS'
+    aws_project_region: "us-east-1",
+
+    // AppSync (GraphQL)
+    aws_appsync_graphqlEndpoint: "https://4felb3kfyjbyxexcjlfdeedppi.appsync-api.us-east-1.amazonaws.com/graphql",
+    aws_appsync_region: "us-east-1",
+    aws_appsync_authenticationType: "AMAZON_COGNITO_USER_POOLS", 
+    // Cognito Auth
+    aws_cognito_identity_pool_id: "us-east-1:1814d77f-d96c-4e15-83ca-5b8cbde1f96a", 
+    aws_cognito_region: "us-east-1",
+    aws_user_pools_id: "us-east-1_XLFswLkja",
+    aws_user_pools_web_client_id: "1luh9sarp96d8obus3q9gl38k7",
+    
+    oauth: {},
+    
+    aws_cognito_username_attributes: ["EMAIL"],
+    aws_cognito_social_providers: [],
+    aws_cognito_signup_attributes: ["EMAIL"],
+    aws_cognito_mfa_configuration: "OFF",
+    aws_cognito_mfa_types: ["SMS"],
+    aws_cognito_password_protection_settings: {
+        passwordPolicyMinLength: 8,
+        passwordPolicyCharacters: []
+    },
+    aws_cognito_verification_mechanisms: ["EMAIL"]
 };
 
 export default awsmobile;

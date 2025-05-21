@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 export default function ConfirmSignup() {
   const navigate = useNavigate();
   const location = useLocation();
-  const email = location.state?.email || ''; // استلام الإيميل من صفحة التسجيل
+  const email = location.state?.email || ''; 
 
   const [code, setCode] = useState('');
   const [message, setMessage] = useState({ type: '', text: '' });

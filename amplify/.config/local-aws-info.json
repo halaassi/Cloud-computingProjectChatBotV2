@@ -1,17 +1,17 @@
 {
+  "main": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/37DzOEjWAp"
+  },
   "dev": {
     "configLevel": "project",
     "useProfile": false,
-    "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/NG9S2z9fGy"
-  },
-  "mainenv": {
-    "configLevel": "project",
-    "useProfile": false,
-    "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/GOY4DdqG3i"
+    "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/sr5O7F2GDD"
   },
   "devv": {
     "configLevel": "project",
     "useProfile": false,
-    "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/CB1TDHaIo6"
+    "awsConfigFilePath": "/Users/halaassi/.amplify/awscloudformation/YHFkZItff0"
   }
 }
