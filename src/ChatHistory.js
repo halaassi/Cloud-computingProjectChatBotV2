@@ -15,7 +15,7 @@ export default function ChatHistory() {
         setMessages(sorted);
         setLoading(false);
       } catch (error) {
-        console.error('❌ Error loading messages:', error);
+        console.error(' Error loading messages:', error);
         setLoading(false);
       }
     };
@@ -34,9 +34,9 @@ export default function ChatHistory() {
         <ul className="space-y-4">
           {messages.map((msg) => (
             <li key={msg.id} className="border p-3 rounded shadow bg-white">
-              <p><strong>🧑 User:</strong> {msg.user}</p>
-              <p><strong>💬 Message:</strong> {msg.message}</p>
-              <p><strong>🤖 Response:</strong> {msg.response}</p>
+              <p><strong> User:</strong> {msg.user}</p>
+              <p><strong>Message:</strong> {msg.message}</p>
+              <p><strong>Response:</strong> {msg.response}</p>
               <p className="text-sm text-gray-400">{new Date(msg.timestamp).toLocaleString()}</p>
             </li>
           ))}

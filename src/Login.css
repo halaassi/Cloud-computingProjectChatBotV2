@@ -1,18 +1,15 @@
-/* Box sizing */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Fullscreen background */
 body, html {
   height: 100%;
   background-color: #f0f2f5;
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Center layout */
 .login-container {
   display: flex;
   justify-content: center;
@@ -39,7 +36,6 @@ max-width: 520px;
 }
 
 
-/* Title */
 .login-title {
   font-size: 28px;
   font-weight: 700;
@@ -47,7 +43,6 @@ max-width: 520px;
   text-align: center;
 }
 
-/* Inputs */
 .login-input {
   width: 100%;
   padding: 16px;
@@ -57,14 +52,12 @@ max-width: 520px;
   background-color: #f9f9f9;
 }
 
-/* Error */
 .login-error {
   color: #e53935;
   font-size: 14px;
   text-align: center;
 }
 
-/* Main button */
 .login-button {
   background-color: #7b2cbf;
   color: #fff;
@@ -80,7 +73,6 @@ max-width: 520px;
   background-color: #5a1fa2;
 }
 
-/* Text link-style button */
 .link-button {
   background: none;
   border: none;
@@ -92,7 +84,6 @@ max-width: 520px;
   margin-top: -0.5rem;
 }
 
-/* Signup */
 .signup-button {
   background-color: #e0e0e0;
   color: #333;

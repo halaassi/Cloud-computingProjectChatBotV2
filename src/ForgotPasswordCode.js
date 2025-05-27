@@ -4,7 +4,7 @@ import './ForgotPasswordCode.css';
 
 export default function ForgotPasswordCode() {
   const [code, setCode] = useState('');
-  const [error, setError] = useState(''); // ✅ حل المشكلة
+  const [error, setError] = useState(''); 
   const navigate = useNavigate();
   const location = useLocation();
   const email = location.state?.email || '';
@@ -15,7 +15,7 @@ export default function ForgotPasswordCode() {
       return;
     }
 
-    setError(''); // Clear previous error
+    setError('');
     console.log('Navigating with:', { email, code });
     navigate('/set-new-password', { state: { email, code } });
   };

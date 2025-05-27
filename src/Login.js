@@ -20,15 +20,15 @@ export default function Login() {
     try {
       await signOut(); 
     } catch (err) {
-      console.warn('⚠️ No previous session to sign out.', err);
+      console.warn(' No previous session to sign out.', err);
     }
 
     try {
       await signIn({ username: email.trim(), password: password.trim() });
-      console.log('✅ Login successful');
+      console.log(' Login successful');
       navigate('/chat');
     } catch (err) {
-      console.error('❌ Login failed:', err);
+      console.error(' Login failed:', err);
 
       switch (err.code) {
         case 'UserNotFoundException':
@@ -82,7 +82,6 @@ export default function Login() {
           Login
         </button>
 
-        {/* 🔗 Forgot Password Link */}
         <button
           className="link-button"
           style={{

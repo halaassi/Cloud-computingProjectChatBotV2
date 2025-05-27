@@ -1,7 +1,7 @@
 
 .chat-container {
-  width: 90vw;           /* 90% من عرض الشاشة */
-  max-width: 800px;      /* الحد الأقصى */
+  width: 90vw;           
+  max-width: 800px;    
   height: 80vh;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -80,7 +80,6 @@
 
 .chat-footer input {
   width: 100%;         
-  /* max-width: 900px;      */
   max-width: 100%;
 
   padding: 12px 16px;
@@ -99,7 +98,6 @@
   cursor: pointer;
 }
 
-/* 📱 Responsive: Mobile and small screens */
 @media (max-width: 480px) {
   .chat-container {
     width: 100vw;

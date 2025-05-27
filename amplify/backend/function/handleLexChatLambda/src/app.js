@@ -29,7 +29,7 @@ const DDB_TABLE = "ChatMessages";
 export const handler = async (event) => {
   const sessionId = event.sessionId || `user-${Date.now()}`;
   const userMessage = event.input || "No message";
-  console.log("📥 Received user message:", userMessage);
+  console.log("Received user message:", userMessage);
 
   try {
     const lexResponse = await lex.send(
@@ -42,7 +42,7 @@ export const handler = async (event) => {
       })
     );
 
-    console.log("🤖 Raw Lex response:", JSON.stringify(lexResponse, null, 2));
+    console.log(" Raw Lex response:", JSON.stringify(lexResponse, null, 2));
 
     const intentName = lexResponse.sessionState?.intent?.name || "UnknownIntent";
     const slots = lexResponse.sessionState?.intent?.slots || {};
@@ -74,7 +74,7 @@ export const handler = async (event) => {
       };
 
       if (osType === "Mac" && instanceType !== "mac2.metal") {
-        botReply = "❌ For macOS, you must use instance type: mac2.metal";
+        botReply = " For macOS, you must use instance type: mac2.metal";
       } else {
         const command = new RunInstancesCommand({
           ImageId: amiMap[osType],
@@ -85,12 +85,12 @@ export const handler = async (event) => {
 
         const result = await ec2.send(command);
         const instanceId = result.Instances?.[0]?.InstanceId;
-        botReply = `✅ EC2 ${osType} instance created! ID: ${instanceId}`;
+        botReply = ` EC2 ${osType} instance created! ID: ${instanceId}`;
       }
     }
 
     else {
-      botReply = "❓ Sorry, I couldn't understand your request.";
+      botReply = " Sorry, I couldn't understand your request.";
     }
 
     await db.send(
@@ -106,15 +106,15 @@ export const handler = async (event) => {
       })
     );
 
-    console.log("✅ Message logged in DynamoDB");
-    console.log("✅ FINAL RETURN", { userMessage, botReply });
+    console.log("Message logged in DynamoDB");
+    console.log("FINAL RETURN", { userMessage, botReply });
 
     return {
       userMessage,
       botReply
     };
   } catch (error) {
-    console.error("❌ Lambda error:", error);
+    console.error(" Lambda error:", error);
 
     return {
       statusCode: 500,

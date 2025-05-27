@@ -14,7 +14,7 @@ export default function ForgotPasswordEmail() {
       localStorage.setItem('resetEmail', email);
       navigate('/verify-code', { state: { email } }); 
     } catch (err) {
-  console.error('❌ Forgot password error:', err);
+  console.error(' Forgot password error:', err);
   if (err.code === 'UserNotFoundException') {
     setError('This email is not registered.');
   } else if (err.code === 'InvalidParameterException') {

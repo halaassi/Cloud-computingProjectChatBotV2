@@ -27,7 +27,7 @@ export default function ForgotPasswordNew() {
         newPassword
       });
 
-      setSuccess('✅ Password reset successfully! Redirecting...');
+      setSuccess(' Password reset successfully! Redirecting...');
       setTimeout(() => navigate('/'), 2000);
     } catch (err) {
       console.error('Reset error:', err);

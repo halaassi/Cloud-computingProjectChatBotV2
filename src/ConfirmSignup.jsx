@@ -14,17 +14,17 @@ export default function ConfirmSignup() {
     e.preventDefault();
     try {
       await confirmSignUp({ username: email, confirmationCode: code });
-      setMessage({ type: 'success', text: 'تم تأكيد الحساب! سيتم توجيهك لتسجيل الدخول.' });
+      setMessage({ type: 'success', text: 'Account verified! You will be directed to log in.'});
       setTimeout(() => navigate('/login'), 2000);
     } catch (err) {
-      setMessage({ type: 'error', text: err.message || 'فشل تأكيد الحساب' });
+      setMessage({ type: 'error', text: err.message || 'Account verification failed' });
     }
   };
 
   const handleResend = async () => {
     try {
       await resendSignUpCode({ username: email });
-      setMessage({ type: 'success', text: 'تم إرسال الكود مرة أخرى إلى بريدك الإلكتروني.' });
+      setMessage({ type: 'success', text: 'The code has been sent back to your email.' });
     } catch (err) {
       setMessage({ type: 'error', text: err.message });
     }
@@ -32,21 +32,20 @@ export default function ConfirmSignup() {
 
   return (
     <div style={styles.container}>
-      <h2>تأكيد البريد الإلكتروني</h2>
-      <p>تم إرسال كود تحقق إلى: <strong>{email}</strong></p>
+      <h2>Email confirmation</h2>
+      <p>A verification code has been sent to <strong>{email}</strong></p>
       <form onSubmit={handleConfirm} style={styles.form}>
         <input
           type="text"
           value={code}
           onChange={(e) => setCode(e.target.value)}
-          placeholder="أدخل كود التحقق"
+          placeholder="Enter verification code    " 
           required
           style={styles.input}
         />
-        <button type="submit" style={styles.button}>تأكيد الحساب</button>
+        <button type="submit" style={styles.button}>Account verification </button>
         <button type="button" style={styles.resendButton} onClick={handleResend}>
-          إعادة إرسال الكود
-        </button>
+Resend code        </button>
         {message.text && (
           <div style={{ color: message.type === 'error' ? 'red' : 'green', marginTop: '10px' }}>
             {message.text}

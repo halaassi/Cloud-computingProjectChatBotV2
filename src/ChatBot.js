@@ -32,7 +32,7 @@ export default function ChatBot() {
       const botReply = response?.sendChatMessage?.botReply || 'No reply.';
       setMessages((prev) => [...prev, { sender: 'bot', text: botReply }]);
     } catch (err) {
-      console.error('❌ Error:', err);
+      console.error(' Error:', err);
       setMessages((prev) => [...prev, { sender: 'bot', text: 'Error sending message.' }]);
     }
   };
